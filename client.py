@@ -494,7 +494,7 @@ def recivedMsg():
         #--------- Boilerplate Code End------------------------------------
 
 
-        #creating rollbutton
+        #creating rollbutton SA3
         if('player1Turn' in message and playerType == 'player1'):
             playerTurn = True
             rollButton = Button(gameWindow,text="Roll Dice", fg='black', font=("Chalkboard SE", 15), bg="grey",command=rollDice, width=20, height=5)
@@ -506,18 +506,11 @@ def recivedMsg():
             rollButton.place(x=screen_width / 2 - 80, y=screen_height/2  + 260)
 
 
-        # Student Activity
+        # Student Activity 2
         # Deciding player turn
-        if('player1Turn' in message or 'player2Turn' in message):
-            diceChoices=['⚀','⚁','⚂','⚃','⚄','⚅']
-            diceValue = diceChoices.index(message[0]) + 1
-
-            if('player2Turn' in message):
-                movePlayer1(diceValue)
-
-
-            if('player1Turn' in message):
-                movePlayer2(diceValue)
+        
+        
+        
 
         # Additional Activity
         # Creating Name Board
